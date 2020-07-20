@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/bin:${HOME}/.gem/ruby/2.7.0/bin"
+export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/bin:${HOME}/privbin/:${HOME}/.gem/ruby/2.7.0/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/pranav/.oh-my-zsh"
