@@ -5,6 +5,7 @@ dwmblocks &
 #picom &
 /home/pranav/.fehbg &
 /home/pranav/bin/settp &
+xautolock -time 10 -locker slock &
 
 # Kill duplicate processes created in the previous dwm restart
 
