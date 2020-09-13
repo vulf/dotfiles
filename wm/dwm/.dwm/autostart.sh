@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # Exec
-dwmblocks &
 #picom &
+dwmblocks &
 /home/pranav/.fehbg &
 /home/pranav/bin/settp &
-xautolock -time 10 -locker slock &
+#xautolock -time 10 -locker slock &
 
 # Kill duplicate processes created in the previous dwm restart
 
@@ -16,4 +16,3 @@ test $NEWEST_PID && pgrep 'autostart.sh' | grep -vw $NEWEST_PID | xargs -r kill
 # dwmblocks
 NEWEST_PID=$(pgrep -n 'dwmblocks')
 test $NEWEST_PID && pgrep 'dwmblocks' | grep -vw $NEWEST_PID | xargs -r kill
-

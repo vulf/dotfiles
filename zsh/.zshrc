@@ -108,9 +108,11 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias mci='make && sudo make clean install'
 alias nf='neofetch --disable uptime packages model Kernel Resolution Memory CPU GPU Theme Icons --os_arch off --shell_version off'
-alias rn='ranger .'
+alias rn='ranger'
 alias n='nmcli'
 alias nu='nmcli c up'
+
+# Temporary aliases
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
