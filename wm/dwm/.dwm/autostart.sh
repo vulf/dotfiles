@@ -5,6 +5,7 @@
 dwmblocks &
 /home/pranav/.fehbg &
 /home/pranav/bin/settp &
+dunst &
 #xautolock -time 10 -locker slock &
 
 # Kill duplicate processes created in the previous dwm restart
