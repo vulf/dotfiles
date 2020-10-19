@@ -3,6 +3,7 @@
 # Exec
 #picom &
 dwmblocks &
+sleep 2
 /home/pranav/.fehbg &
 /home/pranav/bin/settp &
 dunst &
