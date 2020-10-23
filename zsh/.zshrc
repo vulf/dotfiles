@@ -111,6 +111,8 @@ alias nf='neofetch --disable uptime packages model Kernel Resolution Memory CPU 
 alias rn='ranger'
 alias n='nmcli'
 alias nu='nmcli c up'
+alias prm='/usr/bin/rm'
+alias rm='dl'
 
 # Temporary aliases
 
