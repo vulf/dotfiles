@@ -113,6 +113,8 @@ alias n='nmcli'
 alias nu='nmcli c up'
 alias prm='/usr/bin/rm -i'
 alias rm='dl'
+alias todo='cat $HOME/todo'
+alias vtodo='vim $HOME/todo'
 
 # Temporary aliases
 
