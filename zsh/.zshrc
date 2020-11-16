@@ -115,6 +115,7 @@ alias prm='/usr/bin/rm -i'
 alias rm='dl'
 alias todo='cat $HOME/todo'
 alias vtodo='vim $HOME/todo'
+alias fixvol='pactl set-sink-volume 0 +1%'
 
 # Temporary aliases
 

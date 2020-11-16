@@ -2,9 +2,9 @@
 
 # Exec
 #picom &
+/home/pranav/.fehbg &
 dwmblocks &
 sleep 2
-/home/pranav/.fehbg &
 /home/pranav/bin/settp &
 dunst &
 #xautolock -time 10 -locker slock &
