@@ -2,9 +2,15 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
+# Keybindings
 bindkey -e
 bindkey '^[[1;5C' emacs-forward-word
 bindkey '^[[1;5D' emacs-backward-word
+bindkey '^[[H' beginning-of-line
+bindkey '^[[4~' end-of-line
+bindkey '^[[P' delete-char
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/pranav/.zshrc'
