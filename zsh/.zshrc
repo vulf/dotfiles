@@ -33,6 +33,7 @@ alias rm='dl'
 alias todo='cat $HOME/todo'
 alias vtodo='vim $HOME/todo'
 alias fixvol='pactl set-sink-volume 0 +1%'
+alias proto='$HOME/bin/protorem && ssh user@protostar'
 
 # Temporary aliases
 

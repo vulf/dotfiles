@@ -16,7 +16,7 @@ highlight Visual cterm=reverse ctermbg=NONE
 " lightline
 
 let g:lightline = {
-    \ 'colorscheme' : 'wombat',
+    \ 'colorscheme' : 'jellybeans',
     \ }
 
 " Plugins
