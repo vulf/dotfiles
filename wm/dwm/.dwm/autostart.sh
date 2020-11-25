@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Exec
-picom -c -o "0.90" -r 20 &
+#picom -c -o "0.90" -r 20 &
 /home/pranav/.fehbg &
 dwmblocks &
 sleep 2
