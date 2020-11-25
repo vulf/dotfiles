@@ -18,7 +18,6 @@ zstyle :compinstall filename '/home/pranav/.zshrc'
 # Custom
 alias ls='ls --color=auto'
 alias burppro='cd ~/Downloads/burp/bsp/ && java -Xbootclasspath/p:Loader.jar -jar burpsuite_pro_v1.7.35.jar'
-alias kali='docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0  -ti'
 alias vi="nvim"
 alias vim="nvim"
 alias pbcopy='xclip -selection clipboard'
