@@ -6,3 +6,4 @@ export ST="$HOME/builds/st"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export PF_INFO="ascii title os wm term shell editor palette"
 export XDG_DATA_HOME=$HOME/.local/share
+export PATH=$PATH:$HOME/privbin
