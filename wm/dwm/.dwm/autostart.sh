@@ -4,6 +4,7 @@
 #picom -c -o "0.90" -r 20 &
 /home/pranav/.fehbg &
 dwmblocks &
+flameshot &
 sleep 2
 /home/pranav/bin/settp &
 dunst &
