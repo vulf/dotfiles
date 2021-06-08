@@ -41,12 +41,10 @@ alias proto='$HOME/bin/protorem && ssh user@protostar'
 
 export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/bin:${HOME}/.gem/ruby/2.7.0/bin"
 
-fpath+=$HOME/.zsh/pure
-autoload -Uz compinit
-compinit
-autoload -U promptinit; promptinit
-prompt pure
 fpath=( ~/.zfunc "${fpath[@]}" )
+autoload -Uz compinit && compinit
+autoload -U promptinit; promptinit
+prompt spaceship
 autoload todo 
 autoload chwal
 # End of lines added by compinstall
