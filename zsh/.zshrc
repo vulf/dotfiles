@@ -17,7 +17,6 @@ zstyle :compinstall filename '/home/pranav/.zshrc'
 
 # Custom
 alias ls='ls --color=auto'
-alias burppro='cd ~/Downloads/burp/bsp/ && java -Xbootclasspath/p:Loader.jar -jar burpsuite_pro_v1.7.35.jar'
 alias vi="nvim"
 alias vim="nvim"
 alias pbcopy='xclip -selection clipboard'
@@ -30,7 +29,6 @@ alias nu='nmcli c up'
 alias prm='/usr/bin/rm -i'
 alias rm='dl'
 alias fixvol='pactl set-sink-volume 0 +1%'
-alias proto='$HOME/bin/protorem && ssh user@protostar'
 
 # Temporary aliases
 
@@ -39,14 +37,10 @@ alias proto='$HOME/bin/protorem && ssh user@protostar'
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
 
-export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/bin:${HOME}/.gem/ruby/2.7.0/bin"
-
-fpath+=$HOME/.zsh/pure
-autoload -Uz compinit
-compinit
+fpath=( ~/.zsh/pure ~/.zfunc "${fpath[@]}" )
+autoload -Uz compinit && compinit
 autoload -U promptinit; promptinit
 prompt pure
-fpath=( ~/.zfunc "${fpath[@]}" )
 autoload todo 
 autoload chwal
 # End of lines added by compinstall
