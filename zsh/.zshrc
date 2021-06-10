@@ -30,13 +30,10 @@ alias prm='/usr/bin/rm -i'
 alias rm='dl'
 alias fixvol='pactl set-sink-volume 0 +1%'
 
-# Temporary aliases
-
 # Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
 
+# Functions
 fpath=( ~/.zsh/pure ~/.zfunc "${fpath[@]}" )
 autoload -Uz compinit && compinit
 autoload -U promptinit; promptinit
@@ -44,7 +41,8 @@ prompt pure
 autoload todo 
 autoload chwal
 
-# rehash hook
+# Hooks
+# 1. rehash
 zshcache_time="$(date +%s%N)"
 autoload -Uz add-zsh-hook
 rehash_precmd() {
@@ -57,4 +55,3 @@ rehash_precmd() {
   fi
 }
 add-zsh-hook -Uz precmd rehash_precmd
-# End of lines added by compinstall
