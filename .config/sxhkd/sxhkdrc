@@ -127,3 +127,17 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Media keys
+XF86AudioMute
+	amixer -D pulse sset Master toggle
+XF86AudioLowerVolume
+	amixer -D pulse sset Master 5%-
+XF86AudioRaiseVolume
+	amixer -D pulse sset Master 5%+
+
+# flameshot
+Print
+	/usr/bin/flameshot gui
+ctrl + Print
+	/usr/bin/flameshot full -p ~/pictures/ss
