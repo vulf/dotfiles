@@ -18,11 +18,12 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-#background = #222
-background = #FFF
-background-alt = #444
+#background = #FFF
+background = #aa000000
+;background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #555
+;foreground = #555
+foreground = #FFF
 foreground-alt = #dfdfdf
 primary = #ffb52a
 secondary = #e60053
@@ -34,10 +35,12 @@ foreground = ${colors.foreground}
 height = 20
 radius = 10.0
 font-0 = SF Mono:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Fira Code:pixelsize=10;1
-font-3 = Font Awesome 5 Brands;size=10;0
-font-4 = Font Awesome 5 Free;size=10;0
+font-1 = Font Awesome 5 Free:size=10:style=Regular;1.5
+font-2 = Font Awesome 5 Free:size=10:style=Solid;1.5
+font-3 = Font Awesome 5 Brands:size=10:style=Regular;1.5
+font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
+;battery
+font-5 = Font Awesome 5 Free:size=11:style=Solid;2.5
 line-size = 3
 line-color = #f00
 
@@ -46,14 +49,17 @@ border-color = #00000000
 
 [bar/left]
 inherit = bar-common
-width = 15%
+font-1 = Font Awesome 5 Free:size=10:style=Solid;1.5
+width = 21%
 modules-center = bspwm
 
 [bar/right]
 inherit = bar-common
-width = 15%
-offset-x = 85%
-modules-center = cpu wlan battery
+width = 18%
+offset-x = 82%
+module-margin = 1
+separator = %{F#ababab}•
+modules-center = pulseaudio cpu wlan battery
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -138,25 +144,33 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-foreground = ${colors.foreground-alt}
-;label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused = %icon%
+;label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.background-alt}
+label-focused-underline= #555
+label-focused-padding = 1
 
-label-occupied = %index%
-label-occupied-padding = 2
+label-occupied = %icon%
+label-occupied-padding = 1
 
-label-urgent = %index%!
+label-urgent = %icon%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
-label-empty = %index%
+label-empty = %icon%
 label-empty-foreground = ${colors.foreground}
-label-empty-padding = 2
-
+label-empty-padding = 1
+ws-icon-0 = web;%{F#DB4D00}
+ws-icon-1 = terminal;%{F#00C25A}
+ws-icon-2 = book;%{F#0B7BDE}
+ws-icon-3 = vm;%{F#878AC9}
+ws-icon-4 = work;%{F#00BAA8}
+ws-icon-5 = social;%{F#A90ECC}
+ws-icon-6 = email;%{F#FFAA00}
 ; Separator in between workspaces
-; label-separator = |
+label-separator = •
+label-separator-padding = 0
+label-separator-foreground = #ababab
 
 [module/i3]
 type = internal/i3
@@ -234,9 +248,10 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+;format-prefix = %{F#9E053A}%{T3}%{T-}
+format-prefix = %{F#DE0D0D}%{T3}%{T-}
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+;format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
@@ -252,9 +267,10 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
+format-connected = <label-connected>
+;format-connected-underline = #9f78e1
+;label-connected = %{F#0071AD}
+label-connected = %{F#1298E0}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -304,11 +320,12 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <label-volume>
+;label-volume = %{F#0096A1} %{F-}%percentage%%
+label-volume = %{F#10BFCC} %{F-}%percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = 
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -361,21 +378,25 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
+padding = 1
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging = %{F#0BD4DB}<label-charging>
+;format-charging = %{F#115A91}<label-charging>
+;format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging = %{T6}<ramp-capacity>%{T-}
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = %{F#ED1818}
+ramp-capacity-1 = %{F#ED1818}
+ramp-capacity-2 = %{F#D1CA06}
+ramp-capacity-3 = %{F#11CF21}
+ramp-capacity-4 = %{F#11CF21}
+;ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -443,7 +464,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
+;pseudo-transparency = true
 
 [global/wm]
 margin-top = 5
