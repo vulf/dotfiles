@@ -43,6 +43,7 @@ font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-5 = Font Awesome 5 Free:size=11:style=Solid;2.5
 line-size = 3
 line-color = #f00
+wm-restack = bspwm
 
 border-size = 5
 border-color = #00000000
@@ -97,7 +98,7 @@ tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
@@ -321,11 +322,10 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-;label-volume = %{F#0096A1} %{F-}%percentage%%
 label-volume = %{F#10BFCC} %{F-}%percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 
+label-muted = %{F#10BFCC}
 label-muted-foreground = #666
 
 bar-volume-width = 10
