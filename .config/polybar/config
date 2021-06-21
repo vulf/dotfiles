@@ -148,14 +148,15 @@ type = internal/bspwm
 label-focused = %icon%
 ;label-focused-background = ${colors.background-alt}
 label-focused-foreground = ${colors.background-alt}
-label-focused-underline= #555
+label-focused-underline = #555
 label-focused-padding = 1
 
 label-occupied = %icon%
 label-occupied-padding = 1
 
 label-urgent = %icon%!
-label-urgent-background = ${colors.alert}
+;label-urgent-background = ${colors.alert}
+label-urgent-underline = #d10d0d
 label-urgent-padding = 1
 
 label-empty = %icon%
