@@ -16,8 +16,10 @@ bspc config ignore_ewmh_struts	true
 
 $HOME/.config/polybar/launch.sh
 
-#bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a Chromium desktop='^2'
-#bspc rule -a mplayer2 state=floating
-#bspc rule -a Kupfer.py focus=on
-#bspc rule -a Screenkey manage=off
+bspc rule -a firefox desktop='^1'
+bspc rule -a Alacritty desktop='^2'
+bspc rule -a Evince desktop='^3'
+bspc rule -a "VirtualBox Manager" desktop='^4'
+bspc rule -a "VirtualBox Machine" desktop='^4'
+bspc rule -a "Microsoft Teams - Preview" desktop='^5'
+bspc rule -a Thunderbird desktop='^7'
