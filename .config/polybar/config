@@ -19,7 +19,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 #background = #FFF
-background = #aa000000
+background = #000000
 ;background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 ;foreground = #555
@@ -56,11 +56,11 @@ modules-center = bspwm
 
 [bar/right]
 inherit = bar-common
-width = 18%
-offset-x = 82%
+width = 31%
+offset-x = 69%
 module-margin = 1
 separator = %{F#ababab}•
-modules-center = pulseaudio cpu wlan battery
+modules-center = pulseaudio cpu wlan battery date
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -249,8 +249,8 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-;format-prefix = %{F#9E053A}%{T3}%{T-}
-format-prefix = %{F#DE0D0D}%{T3}%{T-}
+format = %{F#DE0D0D}%{T3}%{T-}%{F-} <label>
+;format-prefix = %{F#DE0D0D}%{T3}%{T-}
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
 label = %percentage:2%%
@@ -307,14 +307,14 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = " %a %d, %b"
 
 time = %H:%M
-time-alt = %H:%M:%S
+time-alt = %H:%M
 
-format-prefix = 
+format-prefix = %{F#15D468}%{T3}%{T-}
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -380,9 +380,7 @@ adapter = AC
 full-at = 98
 padding = 1
 
-format-charging = %{F#0BD4DB}<label-charging>
-;format-charging = %{F#115A91}<label-charging>
-;format-charging-underline = #ffb52a
+format-charging = %{F#0BD4DB} <label-charging>
 
 format-discharging = %{T6}<ramp-capacity>%{T-}
 format-discharging-underline = ${self.format-charging-underline}
