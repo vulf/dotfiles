@@ -380,7 +380,7 @@ adapter = AC
 full-at = 98
 padding = 1
 
-format-charging = %{F#0BD4DB} <label-charging>
+format-charging = %{F#0BD4DB}%{F-} <label-charging>
 
 format-discharging = %{T6}<ramp-capacity>%{T-}
 format-discharging-underline = ${self.format-charging-underline}
