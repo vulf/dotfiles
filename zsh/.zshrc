@@ -31,8 +31,7 @@ alias prm='/usr/bin/rm -i'
 alias rm='dl'
 alias fixvol='pactl set-sink-volume 0 +1%'
 alias proto='$HOME/bin/protorem && ssh user@protostar'
-
-# Temporary aliases
+alias mictest='arecord -vv -f dat /dev/null'
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
