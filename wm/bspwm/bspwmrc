@@ -14,8 +14,11 @@ bspc config borderless_monocle	true
 bspc config gapless_monocle	true
 bspc config ignore_ewmh_struts	true
 
+# launch on startup
 $HOME/.config/polybar/launch.sh
+/usr/bin/dunst &
 
+# rules
 bspc rule -a firefox desktop='^1'
 bspc rule -a Alacritty desktop='^2'
 bspc rule -a Evince desktop='^3'
