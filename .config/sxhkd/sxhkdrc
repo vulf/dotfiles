@@ -135,6 +135,8 @@ XF86AudioLowerVolume
 	amixer -D pulse sset Master 5%-
 XF86AudioRaiseVolume
 	amixer -D pulse sset Master 5%+
+super + F12
+	amixer -c 1 sset Mic toggle
 
 # flameshot
 Print
