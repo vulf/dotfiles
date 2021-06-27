@@ -51,7 +51,7 @@ border-color = #00000000
 [bar/left]
 inherit = bar-common
 font-1 = Font Awesome 5 Free:size=10:style=Solid;1.5
-width = 21%
+width = 24%
 modules-center = bspwm
 
 [bar/right]
@@ -169,6 +169,7 @@ ws-icon-3 = vm;%{F#878AC9}
 ws-icon-4 = work;%{F#00BAA8}
 ws-icon-5 = social;%{F#A90ECC}
 ws-icon-6 = email;%{F#FFAA00}
+ws-icon-7 = misc;%{T1}%{F#6AD40D}%{T-}
 ; Separator in between workspaces
 label-separator = •
 label-separator-padding = 0
