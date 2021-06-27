@@ -2,4 +2,4 @@
 My configs
 
 ## TODO
-- [ ] Fix zsh keybindings for Home, Del, End, Ins
+- [x] Fix zsh keybindings for Home, Del, End, Ins
