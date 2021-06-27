@@ -17,6 +17,7 @@ bspc config ignore_ewmh_struts	true
 # launch on startup
 $HOME/.config/polybar/launch.sh
 /usr/bin/dunst &
+/usr/bin/thunderbird &
 
 # rules
 bspc rule -a firefox desktop='^1'
